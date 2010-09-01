@@ -1,0 +1,43 @@
+overflowy - jquery plugin 
+
+this is a really simple plugin to allow you to specify block elements 
+with a defined height that should hide any overflowing content 
+and display ellipsis (ie, ...) underneath.
+
+Notes:
+
+this is alpha quality code only.
+
+probably wildly ineffiecent as it changes the elements to overflow-y:scroll and
+back to hidden - causing reflow, but it works for my requirements in FF3.6+, 
+IE6+, Chrome5+. I couldnt get other similar plugins (autoellipsis, threedots, 
+text-overflow, textOverflow, truncator etc) to work exactly for my project 
+- especially a requirement that the content could include images and other 
+markup aswell as inline text. 
+
+TODO: 
+1) test performance 
+2) make the ellipsis configurable
+
+Author: justin barton 2Sep2010
+Licence: MIT
+Source: http://github.com/bartonj/overflowy
+
+Usage:
+
+1) Include the script (after jquery), for example:
+<script src="jquery.overflowy.min.js"></script>
+
+2) make sure your elements divs have a height set, for example:
+<style>
+    .mystuff { height: 2em; }
+</style>
+
+<div class="mystuff">blabla1<br/>blabla2<br/>blabla3<br/>blablabla4<br/></div>
+
+3) Apply to your elements with a selector
+<script>
+    $(function(){
+        $('.mystuff').overflowy();
+    });
+</script>
