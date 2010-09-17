@@ -8,7 +8,7 @@ Notes:
 
 this is alpha quality code only.
 
-probably wildly ineffiecent as it changes the elements to overflow-y:scroll and
+probably wildly inefficient as it changes the elements to overflow-y:scroll and
 back to hidden - causing reflow, but it works for my requirements in FF3.6+, 
 IE6+, Chrome5+. I couldnt get other similar plugins (autoellipsis, threedots, 
 text-overflow, textOverflow, truncator etc) to work exactly for my project 
@@ -22,6 +22,7 @@ TODO:
 Author: justin barton 2Sep2010
 Licence: MIT
 Source: http://github.com/bartonj/overflowy
+Last Update: 17Sep2010
 
 Usage:
 
@@ -39,6 +40,13 @@ Usage:
 <script>
     $(function(){
         $('.mystuff').overflowy();
+    });
+</script>
+
+4) Specify some settings (eg resetHeight auto resizes height if theres no overflow)
+<script>
+    $(function(){
+        $('.mystuff').overflowy({resetHeight:true});
     });
 </script>
 
